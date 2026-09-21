@@ -8,7 +8,7 @@
 | **What** | SSH brute-force / password-guessing activity |
 | **Who** | Kali attacker `10.10.10.20` targeting `socadmin` |
 | **Where** | Isolated SOC-LAB network; Ubuntu Server `10.10.10.10` |
-| **When** | `2026-09-21 01:04:55` – `2026-09-21 01:05:36` |
+| **When** | `2026-09-21 01:04:55` - `2026-09-21 01:05:36` |
 | **Why** | Simulated unauthorized SSH access attempts against the `socadmin` account |
 | **Detection** | Splunk Enterprise |
 | **Severity** | Medium |
@@ -22,8 +22,8 @@ Splunk identified **13 matching failed-password events** from `10.10.10.20`, fol
 
 The observed behavior was mapped to:
 
-- **T1110.001 — Password Guessing**
-- **T1021.004 — SSH**
+- **T1110.001 - Password Guessing**
+- **T1021.004 - SSH**
 
 ## Response
 
