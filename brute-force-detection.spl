@@ -1,0 +1,6 @@
+index=soc_lab "Failed password"
+| rex "Failed password for (?<user>\w+) from (?<src_ip>\S+)"
+| stats count as failed_attempts min(_time) as first_seen max(_time) as last_seen by src_ip user
+| where failed_attempts >= 5
+| eval first_seen=strftime(first_seen,"%Y-%m-%d %H:%M:%S")
+| eval last_seen=strftime(last_seen,"%Y-%m-%d %H:%M:%S")
